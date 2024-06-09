@@ -1,13 +1,18 @@
+/* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Base styles */
 body {
     background: #222;
+    /* font-family: "Nunito Sans", sans-serif; */
+    font-family: "Roboto", sans-serif;
 }
 
+/* Content styling */
 .content {
     width: 90%;
     max-width: 470px;
@@ -19,6 +24,7 @@ body {
     text-align: center;
 }
 
+/* Search bar styling */
 .search {
     width: 100%;
     display: flex;
@@ -27,32 +33,33 @@ body {
 }
 
 .search input {
-    border: 0;
-    outline: 0;
+    flex: 1;
+    height: 60px;
+    padding: 10px 25px;
+    margin-right: 16px;
+    font-size: 18px;
     background: #ebfffc;
     color: #555;
-    padding: 10px 25px;
-    height: 60px;
-    flex: 1;
-    margin-right: 16px;
-    font: 18px;
+    border: 0;
+    outline: 0;
     border-radius: 30px;
 }
 
 .search button {
+    width: 60px;
+    height: 60px;
+    background: #ebfffc;
     border: 0;
     outline: 0;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
     cursor: pointer;
-    background: #ebfffc;
 }
 
 .search button img {
     width: 25px;
 }
 
+/* Weather widget styling */
 .weather-icon {
     width: 170px;
     margin-top: 30px;
@@ -69,6 +76,7 @@ body {
     margin-top: -10px;
 }
 
+/* Details section styling */
 .details {
     display: flex;
     align-items: center;
@@ -94,14 +102,16 @@ body {
     margin-top: -6px;
 }
 
-* .weather {
-    display: none;
-}
-
+/* Error message styling */
 .error {
     text-align: left;
     margin-left: 10px;
     font-size: 14px;
     margin-top: 10px;
     display: none;
-} 
+}
+
+/* Hide weather by default */
+* .weather {
+    display: none;
+}
